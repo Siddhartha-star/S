@@ -1,0 +1,40 @@
+{
+  "name": "snapsearch",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "description": "Production-grade SaaS platform with role-based authentication and immersive UI.",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:backend": "npm run dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "build": "npm-run-all build:*",
+    "build:backend": "npm run build --workspace backend",
+    "build:frontend": "npm run build --workspace frontend",
+    "lint": "npm-run-all lint:*",
+    "lint:backend": "npm run lint --workspace backend",
+    "lint:frontend": "npm run lint --workspace frontend",
+    "format": "npm-run-all format:*",
+    "format:backend": "npm run format --workspace backend",
+    "format:frontend": "npm run format --workspace frontend",
+    "clean": "npm-run-all clean:*",
+    "clean:backend": "npm run clean --workspace backend",
+    "clean:frontend": "npm run clean --workspace frontend",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md,json}": [
+      "npm run format --if-present",
+      "npm run lint --if-present"
+    ]
+  }
+}
+
