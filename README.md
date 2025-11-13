@@ -31,7 +31,7 @@ SnapSearch is a production-ready, YC-grade dashboard experience that blends secu
 
 **Tooling**
 - npm workspaces, ESLint, Prettier
-- tsx, ts-node, lint-staged, Husky-ready config
+- tsx, ts-node, lint-staged
 
 ---
 
